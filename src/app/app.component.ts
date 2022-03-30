@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'smart_house';
+  title  = 'smart_house';
+  descriptin = "My Smart House !!";
 }
