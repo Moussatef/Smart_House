@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
-import { NavbarComponentComponent } from './component/navbar-component/navbar-component.component';
+import { PrivateModule } from './private/private.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule,
+    PrivateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
