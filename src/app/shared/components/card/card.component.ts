@@ -9,8 +9,8 @@ export class CardComponent implements OnInit {
 
   constructor() { }
 
-  iconOffClass:String = 'iconOff';
-  iconOnClass:String = 'iconOn';
+  iconOffClass:String = 'iconOff bi bi-toggle-off ';
+  iconOnClass:String = 'iconOn bi bi-toggle-on ';
 
   isOn:boolean = true;
 

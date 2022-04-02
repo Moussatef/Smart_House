@@ -1,7 +1,7 @@
 <div class="container shadow py-4">
     <div class="text-end">
-        <button type="button" (click)="changeState()" class="btn ">
-            <i [ngClass]="['bi bi-toggle-off ' + ( isOn ? iconOnClass : iconOffClass) ]"></i>
+        <button type="button" (click)="changeState()" class="status-btn ">
+            <i [ngClass]="[ isOn ? iconOnClass : iconOffClass ]"></i>
         </button>
     </div>
     <div class="row">
