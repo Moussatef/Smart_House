@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { device } from 'src/app/private/models/divace';
+import { Component, Input, OnInit, Output,EventEmitter} from '@angular/core';
+import { Divace } from 'src/app/private/models/divace';
+import { floor } from 'src/app/private/models/floor';
+import { room } from 'src/app/private/models/room';
 
 @Component({
   selector: 'app-card',
@@ -7,10 +9,16 @@ import { device } from 'src/app/private/models/divace';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  @Input() house:string | undefined
-  @Input() floor_number:number | undefined
-  @Input() room_type:string | undefined
-  @Input() divace:device | undefined
+  // @Input() house:string | undefined
+  // @Input() floor:floor | undefined
+  // @Input() room:room | undefined
+  // @Input() house:string | undefined
+  // @Input() floor:floor | undefined
+  // @Input() room:room | undefined
+  @Input() divace!: Divace;
+
+  @Output() onDeleteDivace: EventEmitter<Divace> = new EventEmitter();
+
 
 
   constructor() { }
@@ -22,7 +30,9 @@ export class CardComponent implements OnInit {
 
   changeState(){
     this.isOn = !this.isOn;
-    
+  }
+  onDelete(divace:Divace) {
+    this.onDeleteDivace.emit(divace);
   }
   ngOnInit(): void {
     this.divace ? this.divace.status == "ON" ? this.isOn = true : this.isOn = false : this.isOn = false;

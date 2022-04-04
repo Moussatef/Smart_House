@@ -1,2 +1,2 @@
-<p class="text-muted">Room {{room_type}} divace</p>
-<app-card [house]="house" [floor_number]="floor_number" [room_type]="room_type" [divace]="divace"></app-card>
+<p class="text-muted">{{divace?.room}} divace</p>
+<app-card [divace]="divace" (onDelete)="onDeleteDiv(divace)" ></app-card>

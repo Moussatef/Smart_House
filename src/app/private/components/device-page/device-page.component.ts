@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { device } from '../../models/divace';
-import { house } from '../../models/house';
+import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+
+import { Divace } from '../../models/divace';
 
 @Component({
   selector: 'app-device-page',
@@ -8,14 +8,19 @@ import { house } from '../../models/house';
   styleUrls: ['./device-page.component.css']
 })
 export class DevicePageComponent implements OnInit {
-  @Input() house:string | undefined
-  @Input() floor_number:number | undefined
-  @Input() room_type:string | undefined
-  @Input() divace:device | undefined
+  // @Input() house:string | undefined
+  // @Input() floor?:floor 
+  // @Input() room?:room 
+  @Input() divace!:Divace
+  @Output() onDeleteDivace: EventEmitter<Divace> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onDeleteDiv(divace:Divace) {
+    this.onDeleteDivace.emit(divace);
   }
 
 }

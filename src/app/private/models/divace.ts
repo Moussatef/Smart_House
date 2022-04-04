@@ -1,8 +1,9 @@
 import {status} from "../enums/onOffEnum";
 
-export interface device{
-
-    id:number;
+export interface Divace{
+    id?:number;
     status:status;
-    name:string
+    name:string;
+    floor:number;
+    room:string
 }

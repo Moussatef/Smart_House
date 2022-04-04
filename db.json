@@ -1,144 +1,46 @@
 {
-    "user":{
-        "id" : 1,
-        "username":"Moussatef",
-        "password":"azerty",
-        "house":{
-            "id":1,
-            "name":"villa",
-            "address":"Rue Riyad Rabat",
-            "floor":[
-                {
-                    "id":1,
-                    "number":1,
-                    "room":[
-                        {
-                            "id":1,
-                            "type":"bed room",
-                            "divace":[
-                                {
-                                    "id":1,
-                                    "status":"ON",
-                                    "name":"TV Samsung"
-                                },
-                                {
-                                    "id":10,
-                                    "status":"OFF",
-                                    "name":"Lampe RR2"
-                                },
-                                {
-                                    "id":11,
-                                    "status":"ON",
-                                    "name":"Lampe RR3"
-                                }
-                            ]
-                        },
-                        {
-                            "id":2,
-                            "type":"living room",
-                            "divace":[
-                                {
-                                    "id":2,
-                                    "status":"ON",
-                                    "name":"TV LG"
-                                }
-                            ]
-                        },
-                        {
-                            "id":3,
-                            "type":"house entry",
-                            "divace":[
-                                {
-                                    "id":3,
-                                    "status":"OFF",
-                                    "name":"Lampa"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id":2,
-                    "number":2,
-                    "room":[
-                        {
-                            "id":4,
-                            "type":"bed room",
-                            "divace":[
-                                {
-                                    "id":4,
-                                    "status":"OFF",
-                                    "name":"Camera"
-                                }
-                            ]
-                        },
-                        {
-                            "id":5,
-                            "type":"living room",
-                            "divace":[
-                                {
-                                    "id":5,
-                                    "status":"ON",
-                                    "name":"Google assistant"
-                                }
-                            ]
-                        },
-                        {
-                            "id":6,
-                            "type":"house entry",
-                            "divace":[
-                                {
-                                    "id":6,
-                                    "status":"ON",
-                                    "name":"Clima"
-                                }
-                            ]
-                        }
-                    ]
-                    
-                },
-                {
-                    "id":3,
-                    "number":3,
-                    "room":[
-                        {
-                            "id":7,
-                            "type":"bed room",
-                            "divace":[
-                                {
-                                    "id":7,
-                                    "status":"ON",
-                                    "name":"TV LG200"
-                                }
-                            ]
-                        },
-                        {
-                            "id":8,
-                            "type":"living room",
-                            "divace":[
-                                {
-                                    "id":8,
-                                    "status":"ON",
-                                    "name":"Lamp X3"
-                                }
-                            ]
-                        },
-                        {
-                            "id":9,
-                            "type":"house entry",
-                            "divace":[
-                                {
-                                    "id":9,
-                                    "status":"ON",
-                                    "name":"Lamp SSD"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
-        
-    }
-    
-}
+    "Divace": [
+      {
+        "id": 1,
+        "name": "TV",
+        "room": "Room 2",
+        "floor": 1,
+        "status": "ON"
+      },
+      {
+        "name": "Samsung",
+        "room": "room1",
+        "floor": 2,
+        "status": "ON",
+        "id": 4
+      },
+      {
+        "name": "ELATTARI",
+        "room": "YOUCODE",
+        "floor": 2,
+        "status": "ON",
+        "id": 5
+      },
+      {
+        "name": "LG",
+        "room": "bedroom",
+        "floor": 3,
+        "status": "OFF",
+        "id": 6
+      },
+      {
+        "name": "test",
+        "room": "room1",
+        "floor": 2,
+        "status": "OFF",
+        "id": 7
+      },
+      {
+        "name": "Lamp",
+        "room": "room2",
+        "floor": "",
+        "status": "ON",
+        "id": 8
+      }
+    ]
+  }

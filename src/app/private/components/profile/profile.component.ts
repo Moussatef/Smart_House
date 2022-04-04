@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { user } from '../../models/user';
+import { Divace } from '../../models/divace';
 import { ProfileService } from '../../services/profile.service';
 
 @Component({
@@ -9,11 +9,26 @@ import { ProfileService } from '../../services/profile.service';
 })
 export class ProfileComponent implements OnInit {
 
-  userProfile:user | undefined 
+  // userProfile:user | undefined 
+  // findFloor? : floor
+  // findRoom?:room
+  // findDivace?:device
+
+  divaces : Divace[] = []
   constructor(private profileService:ProfileService) { }
 
   ngOnInit(): void {
-    this.profileService.getUser().subscribe( (user) => this.userProfile = user )
+    this.profileService.getDivaces().subscribe( (divaces) => this.divaces = divaces )
+  }
+
+  deleteDivase(divace:Divace) {
+    // this.findFloor = this.userProfile?.house?.floor.find(el => el.id === floor.id)
+    // this.findRoom = this.findFloor?.room.find(el => el.id === room.id)
+    // this.findDivace = this.findRoom?.divace.find(el => el.id === divace.id)
+
+    this.profileService
+      .deleteDivace(divace)
+      .subscribe((divace) => this.divaces.filter(el => el.id !== divace.id));
   }
 
 }
