@@ -13,7 +13,7 @@
             </div>
             <div class="col-lg-6 col-md-8 col-sm-6 col-6">
                 <h6>
-                    Smart House
+                    {{divace ? divace.name : 'undefinde'}}
                 </h6>
             </div>
         </div>
@@ -27,7 +27,7 @@
             </div>
             <div class="col-lg-6 col-md-8 col-sm-6 col-6">
                 <h6>
-                    Living room
+                    {{room_type }}
                 </h6>
             </div>
         </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="col-lg-6 col-md-8 col-sm-6 col-6">
                 <h6>
-                    Floor 2
+                    Floor {{floor_number}}
                 </h6>
             </div>
         </div>
@@ -53,7 +53,7 @@
             </div>
             <div class="col-lg-6 col-md-8 col-sm-6 col-6">
                 <h6>
-                    ON
+                    {{divace ? divace.status : ''}}
                 </h6>
             </div>
         </div>

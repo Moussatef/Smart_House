@@ -1,6 +1,6 @@
 import {status} from "../enums/onOffEnum";
 
-export interface divace{
+export interface device{
 
     id:number;
     status:status;

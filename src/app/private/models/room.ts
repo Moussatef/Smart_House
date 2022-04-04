@@ -1,8 +1,8 @@
-import { divace } from "./divace";
+import { device } from "./divace";
 
 export interface room{
     id:number;
     type:string;
-    device:divace[];
+    divace:device[];
     
 }

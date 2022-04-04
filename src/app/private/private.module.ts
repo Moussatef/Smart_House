@@ -5,12 +5,14 @@ import { PrivateRoutingModule } from './private-routing.module';
 import { PrivateComponent } from './private.component';
 import { SharedModule } from '../shared/shared.module';
 import { DevicePageComponent } from './components/device-page/device-page.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
   declarations: [
     PrivateComponent,
-    DevicePageComponent
+    DevicePageComponent,
+    ProfileComponent
   ],
 
   imports: [
@@ -18,7 +20,7 @@ import { DevicePageComponent } from './components/device-page/device-page.compon
     PrivateRoutingModule,
     SharedModule
   ],
-  exports:[DevicePageComponent]
+  exports:[ProfileComponent,DevicePageComponent]
 
 })
 export class PrivateModule { }

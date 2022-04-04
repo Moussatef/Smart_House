@@ -1,0 +1,26 @@
+<div class="container-fluid row">
+    <h2>Welcome back {{userProfile?.username}}</h2>
+    <hr />
+
+
+    <div class="container">
+        <div *ngFor="let floor of userProfile?.house?.floor" class="shadow my-4">
+            <h3 class="ps-4 my-3 ">
+                Floor number : {{floor.number}}
+            </h3>
+            <div *ngFor="let room of floor.room" class="row justify-content-center my-2">
+                <h4 class="ps-5 my-4">
+                    Room of {{room.type}}
+                </h4>
+
+                <div *ngFor="let divace of room.divace" class="col-lg-3 col-md-4 col-sm-10 col-12">
+                    <app-device-page [house]="userProfile?.house?.name" [floor_number]="floor.number"
+                        [room_type]="room.type" [divace]="divace"></app-device-page>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

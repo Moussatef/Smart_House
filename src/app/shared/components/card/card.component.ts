@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { device } from 'src/app/private/models/divace';
 
 @Component({
   selector: 'app-card',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+  @Input() house:string | undefined
+  @Input() floor_number:number | undefined
+  @Input() room_type:string | undefined
+  @Input() divace:device | undefined
+
 
   constructor() { }
 
@@ -19,6 +25,7 @@ export class CardComponent implements OnInit {
     
   }
   ngOnInit(): void {
+    this.divace ? this.divace.status == "ON" ? this.isOn = true : this.isOn = false : this.isOn = false;
   }
 
 }

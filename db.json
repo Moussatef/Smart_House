@@ -20,6 +20,16 @@
                                     "id":1,
                                     "status":"ON",
                                     "name":"TV Samsung"
+                                },
+                                {
+                                    "id":10,
+                                    "status":"OFF",
+                                    "name":"Lampe RR2"
+                                },
+                                {
+                                    "id":11,
+                                    "status":"ON",
+                                    "name":"Lampe RR3"
                                 }
                             ]
                         },
@@ -107,7 +117,7 @@
                             "type":"living room",
                             "divace":[
                                 {
-                                    "id":2,
+                                    "id":8,
                                     "status":"ON",
                                     "name":"Lamp X3"
                                 }
@@ -118,7 +128,7 @@
                             "type":"house entry",
                             "divace":[
                                 {
-                                    "id":1,
+                                    "id":9,
                                     "status":"ON",
                                     "name":"Lamp SSD"
                                 }
