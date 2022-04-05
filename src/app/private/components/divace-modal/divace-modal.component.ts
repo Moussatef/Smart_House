@@ -10,7 +10,7 @@ import { status } from '../../enums/onOffEnum';
 })
 export class DivaceModalComponent implements OnInit {
 
-  @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
+  @Output() onAddDivace: EventEmitter<Divace> = new EventEmitter();
 
   divace_name!   : string ; 
   floor_number!  : number;
@@ -34,6 +34,8 @@ export class DivaceModalComponent implements OnInit {
       floor  : this.floor_number
 
     }
+
+    this.onAddDivace.emit(divace)
 
     this.divace_name   = ''
     this.room_type     = ''
