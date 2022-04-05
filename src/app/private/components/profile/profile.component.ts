@@ -9,11 +9,6 @@ import { ProfileService } from '../../services/profile.service';
 })
 export class ProfileComponent implements OnInit {
 
-  // userProfile:user | undefined 
-  // findFloor? : floor
-  // findRoom?:room
-  // findDivace?:device
-
   divaces : Divace[] = []
   constructor(private profileService:ProfileService) { }
 
@@ -22,11 +17,6 @@ export class ProfileComponent implements OnInit {
   }
 
   deleteDivase(divace:Divace) {
-    // this.findFloor = this.userProfile?.house?.floor.find(el => el.id === floor.id)
-    // this.findRoom = this.findFloor?.room.find(el => el.id === room.id)
-    // this.findDivace = this.findRoom?.divace.find(el => el.id === divace.id)
-    console.log("ime in profile");
-    
 
     this.profileService
       .deleteDivace(divace)
@@ -35,6 +25,10 @@ export class ProfileComponent implements OnInit {
 
   changeStatusDivace(divace:Divace){
     this.profileService.changeStatus(divace).subscribe()
+  }
+
+  addNewDivace(divace:Divace){
+    this.profileService.addNewDivace(divace).subscribe( () => this.divaces.push(divace))
   }
 
 }

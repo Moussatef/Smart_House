@@ -18,19 +18,29 @@ export class ProfileService {
   private apiUrl = 'http://localhost:5000/Divace';
 
   getDivaces(): Observable<Divace[]> {
+
     return this.http.get<Divace[]>(this.apiUrl);
+
   }
 
-  deleteDivace(divace : Divace): Observable<Divace> {
-    console.log(divace.name);
-    
+  deleteDivace(divace : Divace) : Observable<Divace> {
+
     const deleteDivaceUrl = `${this.apiUrl}/${divace.id}`
+
     return this.http.delete<Divace>(deleteDivaceUrl);
+
   }
 
-  changeStatus(divace:Divace):Observable<Divace>{
+  changeStatus(divace:Divace) : Observable<Divace> {
+
     const url = `${this.apiUrl}/${divace.id}`;
     return this.http.put<Divace>(url, divace, httpOptions);
+
+  }
+
+  addNewDivace(divace:Divace) : Observable<Divace> {
+
+    return this.http.post<Divace>(this.apiUrl,divace,httpOptions)
 
   }
 
