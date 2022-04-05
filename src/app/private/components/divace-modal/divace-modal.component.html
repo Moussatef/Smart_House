@@ -14,9 +14,19 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="divace_name" class="col-form-label">Divace name :</label>
-                            <input type="text" class="form-control" [(ngModel)]="divace_name" name="divace_name"
-                                id="divace_name">
+                            <input [ngClass]="[ divace_name.touched && divace_name.invalid ? 'is-invalid': '']" type="text" class="form-control" required #divace_name="ngModel" ngModel
+                                 name="divace_name" placeholder="divace name">
 
+                            <div  *ngIf="divace_name.touched && divace_name.invalid"
+                                class="alert alert-danger d-flex align-items-center my-2" role="alert">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                    aria-label="Danger:">
+                                    <use xlink:href="#exclamation-triangle-fill" />
+                                </svg>
+                                <div>
+                                    An example danger alert with an icon
+                                </div>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="floor_number" class="col-form-label">Floor number:</label>
@@ -37,7 +47,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <input type="submit" value="Save divace" class="btn btn-primary" />
+                        <input type="submit" [ngClass]="[divace_name.invalid ? 'disabled': '']" value="Save divace" class="btn btn-primary" />
                     </div>
                 </form>
             </div>

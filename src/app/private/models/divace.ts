@@ -1,7 +1,7 @@
 import {status} from "../enums/onOffEnum";
 
 export interface Divace{
-    id?:number;
+    id:number;
     status:status;
     name:string;
     floor:number;

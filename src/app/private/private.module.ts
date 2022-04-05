@@ -9,6 +9,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { DivaceModalComponent } from './components/divace-modal/divace-modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { DivaceValidationDirective } from './directives/divace-validation.directive';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     PrivateComponent,
     DevicePageComponent,
     ProfileComponent,
-    DivaceModalComponent
+    DivaceModalComponent,
+    DivaceValidationDirective
   ],
 
   imports: [
