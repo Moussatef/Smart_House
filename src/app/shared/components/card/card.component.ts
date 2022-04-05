@@ -2,6 +2,7 @@ import { Component, Input, OnInit, Output,EventEmitter} from '@angular/core';
 import { Divace } from 'src/app/private/models/divace';
 import { floor } from 'src/app/private/models/floor';
 import { room } from 'src/app/private/models/room';
+import {status} from "../../../private/enums/onOffEnum";
 
 @Component({
   selector: 'app-card',
@@ -17,7 +18,8 @@ export class CardComponent implements OnInit {
   // @Input() room:room | undefined
   @Input() divace!: Divace;
 
-  @Output() onDeleteDivace: EventEmitter<Divace> = new EventEmitter();
+  @Output() onDeleteDiv: EventEmitter<Divace> = new EventEmitter();
+  @Output() onStatusChange: EventEmitter<Divace> = new EventEmitter();
 
 
 
@@ -28,11 +30,19 @@ export class CardComponent implements OnInit {
 
   isOn:boolean = true;
 
-  changeState(){
-    this.isOn = !this.isOn;
-  }
+  
   onDelete(divace:Divace) {
-    this.onDeleteDivace.emit(divace);
+    this.onDeleteDiv.emit(divace);
+    console.log(divace.id);
+    
+  }
+
+  onChangeStatus(divace:Divace) {
+    this.isOn = !this.isOn;
+    divace.status = this.isOn ? status.ON : status.OFF;
+    this.onStatusChange.emit(divace);
+    console.log(divace.status);
+    
   }
   ngOnInit(): void {
     this.divace ? this.divace.status == "ON" ? this.isOn = true : this.isOn = false : this.isOn = false;

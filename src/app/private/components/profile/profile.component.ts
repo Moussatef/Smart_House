@@ -25,10 +25,16 @@ export class ProfileComponent implements OnInit {
     // this.findFloor = this.userProfile?.house?.floor.find(el => el.id === floor.id)
     // this.findRoom = this.findFloor?.room.find(el => el.id === room.id)
     // this.findDivace = this.findRoom?.divace.find(el => el.id === divace.id)
+    console.log("ime in profile");
+    
 
     this.profileService
       .deleteDivace(divace)
-      .subscribe((divace) => this.divaces.filter(el => el.id !== divace.id));
+      .subscribe(() => ( this.divaces = this.divaces.filter(el => el.id !== divace.id)));
+  }
+
+  changeStatusDivace(divace:Divace){
+    this.profileService.changeStatus(divace).subscribe()
   }
 
 }

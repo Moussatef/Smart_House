@@ -13,6 +13,7 @@ export class DevicePageComponent implements OnInit {
   // @Input() room?:room 
   @Input() divace!:Divace
   @Output() onDeleteDivace: EventEmitter<Divace> = new EventEmitter();
+  @Output() onStatusChange: EventEmitter<Divace> = new EventEmitter();
 
   constructor() { }
 
@@ -20,7 +21,14 @@ export class DevicePageComponent implements OnInit {
   }
 
   onDeleteDiv(divace:Divace) {
+    console.log("I'm in device");
     this.onDeleteDivace.emit(divace);
+  }
+
+  onChangeStatus(divace:Divace) {
+    this.onStatusChange.emit(divace);
+    console.log(divace.id);
+    
   }
 
 }

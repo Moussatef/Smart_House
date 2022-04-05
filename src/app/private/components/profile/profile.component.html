@@ -1,28 +1,15 @@
-<div class="container-fluid row">
+<div class="container-fluid ">
+
     <!-- <h2>Welcome back {{userProfile?.username}}</h2> -->
-    <hr />
-
-
-    <div class="container">
-
+    <div class="text-center my-4">
+        <app-divace-modal></app-divace-modal>
+    </div>
+    <div class=" row mt-2 justify-content-center  ">
         <hr>
-
-        <div *ngFor="let divace of divaces" class="col-lg-3 col-md-4 col-sm-10 col-12 mb-5">
-            <app-device-page (onDeleteDivace)="deleteDivase(divace)" [divace]="divace"></app-device-page>
+        <div *ngFor="let  divace of divaces" class="col-lg-4 col-md-4 col-sm-10 col-12 mb-5">
+            <app-device-page (onDeleteDivace)="deleteDivase(divace)" (onStatusChange)="changeStatusDivace(divace)"
+                [divace]="divace"></app-device-page>
         </div>
         <hr>
-
-
-        <!-- <div *ngFor="let floor of userProfile?.house?.floor" class="shadow my-4 p-3">
-            <h3 class="ps-4 my-3 ">
-                Floor number : {{floor.number}}
-            </h3>
-            <div *ngFor="let room of floor.room" class="row justify-content-center my-2">
-                
-
-            </div> -->
-
-        <!-- </div> -->
-
     </div>
 </div>

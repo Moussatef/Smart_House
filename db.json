@@ -1,46 +1,39 @@
 {
-    "Divace": [
-      {
-        "id": 1,
-        "name": "TV",
-        "room": "Room 2",
-        "floor": 1,
-        "status": "ON"
-      },
-      {
-        "name": "Samsung",
-        "room": "room1",
-        "floor": 2,
-        "status": "ON",
-        "id": 4
-      },
-      {
-        "name": "ELATTARI",
-        "room": "YOUCODE",
-        "floor": 2,
-        "status": "ON",
-        "id": 5
-      },
-      {
-        "name": "LG",
-        "room": "bedroom",
-        "floor": 3,
-        "status": "OFF",
-        "id": 6
-      },
-      {
-        "name": "test",
-        "room": "room1",
-        "floor": 2,
-        "status": "OFF",
-        "id": 7
-      },
-      {
-        "name": "Lamp",
-        "room": "room2",
-        "floor": "",
-        "status": "ON",
-        "id": 8
-      }
-    ]
-  }
+  "Divace": [
+    {
+      "id": 1,
+      "name": "TV",
+      "room": "Room 2",
+      "floor": 1,
+      "status": "OFF"
+    },
+    {
+      "name": "Clime",
+      "room": "YOUCODE",
+      "floor": 2,
+      "status": "ON",
+      "id": 5
+    },
+    {
+      "name": "LG",
+      "room": "bedroom",
+      "floor": 3,
+      "status": "OFF",
+      "id": 6
+    },
+    {
+      "name": "Lamp",
+      "room": "room3",
+      "floor": 1,
+      "status": "ON",
+      "id": 7
+    },
+    {
+      "name": "Lamp",
+      "room": "room2",
+      "floor": 2,
+      "status": "ON",
+      "id": 8
+    }
+  ]
+}

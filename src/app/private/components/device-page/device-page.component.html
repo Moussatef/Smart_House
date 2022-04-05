@@ -1,2 +1,4 @@
+
 <p class="text-muted">{{divace?.room}} divace</p>
-<app-card [divace]="divace" (onDelete)="onDeleteDiv(divace)" ></app-card>
+
+<app-card [divace]="divace" (onDeleteDiv)="onDeleteDiv(divace) " (onStatusChange)="onChangeStatus(divace)"></app-card>

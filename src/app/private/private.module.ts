@@ -6,19 +6,25 @@ import { PrivateComponent } from './private.component';
 import { SharedModule } from '../shared/shared.module';
 import { DevicePageComponent } from './components/device-page/device-page.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DivaceModalComponent } from './components/divace-modal/divace-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     PrivateComponent,
     DevicePageComponent,
-    ProfileComponent
+    ProfileComponent,
+    DivaceModalComponent
   ],
 
   imports: [
     CommonModule,
     PrivateRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports:[ProfileComponent,DevicePageComponent]
 
