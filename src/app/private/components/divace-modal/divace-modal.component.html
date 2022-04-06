@@ -1,13 +1,12 @@
 <div class="">
 
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">Add New
         Divace</button>
-    <div class="modal fade text-start" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade text-start" id="addModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New divace</h5>
+                    <h5 class="modal-title" id="modalLabel">New divace</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form (ngSubmit)="onSubmit()">
@@ -32,7 +31,8 @@
                         </div>
 
                         <app-danger-alert *ngIf="floor_nb.touched && floor_nb.invalid "
-                            [description]="floor_number < 1 || floor_number > 10 ? 'Floor number must be greater than 0 and less than 10': 'Floor number is required!! '" [type]="'danger'"></app-danger-alert>
+                            [description]="floor_number < 1 || floor_number > 10 ? 'Floor number must be greater than 0 and less than 10': 'Floor number is required!! '"
+                            [type]="'danger'"></app-danger-alert>
 
                         <div class="mb-3">
                             <label for="room_type" class="col-form-label">Room type :</label>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <input type="submit"
+                        <input type="submit" data-bs-dismiss="modal"
                             [ngClass]="[divace_n.invalid || room_t.invalid || floor_nb.invalid  ? 'disabled': '']"
                             value="Save divace" class="btn btn-primary" />
                     </div>

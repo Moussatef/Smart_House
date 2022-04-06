@@ -50,142 +50,18 @@
       "floor": 10
     },
     {
-      "id": 678279,
-      "status": "OFF"
+      "id": 429234,
+      "name": "Destiny Barrera",
+      "room": "Corporis provident ",
+      "status": "ON",
+      "floor": 2
     },
     {
-      "id": 228280,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 294128,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 910877,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 836018,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 717907,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 215745,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 809038,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 504976,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 850194,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 520919,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 651526,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 382250,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 890332,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 490652,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 758172,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 128646,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 395728,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 182339,
-      "name": "",
-      "room": "",
-      "status": "OFF",
-      "floor": 0
-    },
-    {
-      "id": 575111,
-      "status": "OFF"
-    },
-    {
-      "id": 448654,
-      "status": "OFF"
+      "id": 707036,
+      "name": "TaShya Berg",
+      "room": "Et neque omnis conse",
+      "status": "ON",
+      "floor": 7
     }
   ]
 }
