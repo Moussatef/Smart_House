@@ -13,7 +13,7 @@ export class DivaceModalComponent implements OnInit {
   @Output() onAddDivace: EventEmitter<Divace> = new EventEmitter();
 
   divace_name!   : string ; 
-  floor_number!  : number;
+  floor_number  : number = 1;
   room_type!     : string;
   status_divace! : boolean
 
@@ -30,7 +30,7 @@ export class DivaceModalComponent implements OnInit {
       name   : this.divace_name, 
       room   : this.room_type,
       status : this.status_divace ? status.ON : status.OFF,
-      floor  : this.floor_number
+      floor  : this.floor_number 
 
     }
 

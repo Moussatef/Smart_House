@@ -24,19 +24,26 @@
                         </div>
                         <div class="mb-3">
                             <label for="floor_number" class="col-form-label">Floor number:</label>
-                            <input type="number" required #floor_nb="ngModel" value="1" min="1" max="10"
-                                class="form-control" name="floor_number" [(ngModel)]="floor_number" id="floor_number">
+                            <input type="number"
+                                [ngClass]="[ floor_nb.touched && floor_nb.invalid || floor_number < 1  ? 'is-invalid': '']"
+                                required #floor_nb="ngModel" value="1" min="1" max="10" class="form-control"
+                                name="floor_number" [(ngModel)]="floor_number" id="floor_number"
+                                placeholder="Floor number">
                         </div>
 
+                        <app-danger-alert *ngIf="floor_nb.touched && floor_nb.invalid "
+                            [description]="floor_number < 1 || floor_number > 10 ? 'Floor number must be greater than 0 and less than 10': 'Floor number is required!! '" [type]="'danger'"></app-danger-alert>
 
                         <div class="mb-3">
                             <label for="room_type" class="col-form-label">Room type :</label>
-                            <input type="text" class="form-control" required #room_t="ngModel" [(ngModel)]="room_type"
-                                name="room_type" id="room_type">
+                            <input type="text" class="form-control"
+                                [ngClass]="[ room_t.touched && room_t.invalid ? 'is-invalid': '']" required
+                                #room_t="ngModel" [(ngModel)]="room_type" name="room_type" id="room_type"
+                                placeholder="room type">
                         </div>
 
                         <app-danger-alert *ngIf="room_t.touched && room_t.invalid"
-                                [description]="'Room type is required!! '" [type]="'danger'"></app-danger-alert>
+                            [description]="'Room type is required!! '" [type]="'danger'"></app-danger-alert>
 
                         <div class="form-check form-switch mb-3 ">
                             <input class="form-check-input fs-5 " type="checkbox" [(ngModel)]="status_divace"
@@ -46,8 +53,9 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <input type="submit" [ngClass]="[divace_n.invalid ? 'disabled': '']" value="Save divace"
-                            class="btn btn-primary" />
+                        <input type="submit"
+                            [ngClass]="[divace_n.invalid || room_t.invalid || floor_nb.invalid  ? 'disabled': '']"
+                            value="Save divace" class="btn btn-primary" />
                     </div>
                 </form>
             </div>
