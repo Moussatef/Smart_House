@@ -1,15 +1,21 @@
-<div class="container-fluid ">
+<div class="container">
 
-    <!-- <h2>Welcome back {{userProfile?.username}}</h2> -->
-    <div class="text-center my-4">
-        <app-divace-modal (onAddDivace)="addNewDivace($event)"></app-divace-modal>
+    <div class="title-dev">
+        <h1>My Smart House</h1>
     </div>
-    <div class=" row mt-2 justify-content-center  ">
-        <hr>
-        <div *ngFor="let  divace of divaces" class="col-lg-4 col-md-4 col-sm-10 col-12 mb-5">
-            <app-device-page (onDeleteDivace)="deleteDivase(divace)" (onStatusChange)="changeStatusDivace(divace)" 
-                [divace]="divace"></app-device-page>
+    <div class="container-fluid ">
+
+        <!-- <h2>Welcome back {{userProfile?.username}}</h2> -->
+        <div class="text-center my-4">
+            <app-divace-modal (onAddDivace)="addNewDivace($event)"></app-divace-modal>
         </div>
-        <hr>
+        <div class=" row mt-2 justify-content-center  ">
+            <hr>
+            <div *ngFor="let  divace of divaces" class="col-lg-4 col-md-4 col-sm-10 col-12 mb-5">
+                <app-device-page (onDeleteDivace)="deleteDivase(divace)" (onStatusChange)="changeStatusDivace(divace)"
+                    [divace]="divace"></app-device-page>
+            </div>
+            <hr>
+        </div>
     </div>
 </div>

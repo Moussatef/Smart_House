@@ -1,0 +1,12 @@
+h1{
+    color: white;
+}
+
+.title-dev{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #8364e8, #9a70ec, #af7cf1, #c289f5, #d397fa);;
+    width: 100%;
+    height: 150px;
+}

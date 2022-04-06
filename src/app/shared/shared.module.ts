@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from './components/card/card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DangerAlertComponent } from './components/danger-alert/danger-alert.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -10,10 +13,13 @@ import { DangerAlertComponent } from './components/danger-alert/danger-alert.com
   declarations: [
     CardComponent,
     NavbarComponent,
-    DangerAlertComponent
+    DangerAlertComponent,
+    NotFoundComponent,
+    HomePageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     DangerAlertComponent,
