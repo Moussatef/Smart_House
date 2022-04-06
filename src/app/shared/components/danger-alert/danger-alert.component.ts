@@ -16,7 +16,6 @@ export class DangerAlertComponent implements OnInit {
 
   ngOnInit(): void {
     this.classType = this.type == "danger" ? "alert-danger" : this.type== "success" ? "alert-success" : "alert-info";
-
   }
 
 }
