@@ -1,9 +1,12 @@
-
+.card-icon i{
+    font-size: 5rem;
+    color: #2d6fff;
+}
 .span-btns{
     padding-bottom: 2px;
     margin-bottom: 10px;
-    border: #9f9f9f solid 2px;
-    border-radius: 100px;
+    border-bottom: #407BFF solid 2px;
+    border-bottom-right-radius: 20px;
     text-align: end;
 }
 
@@ -22,7 +25,7 @@
 .delete-btn{
     
     border: none;
-    color: #e43457;
+    color: #6e6e6e;
     
 }
 
@@ -38,3 +41,14 @@ button{
     font-size: 1.5rem !important;
     background-color: transparent;
 }
+
+.card-divace:hover {
+    border: rgba(89, 141, 253, 0.132) solid 2px;
+    box-shadow: 0px 0 25px 0 rgba(16, 110, 234, 0.1) !important;
+  }
+  .services .icon-box:hover h4 a, .services .icon-box:hover .icon i {
+    color: #106eea;
+  }
+  .services .icon-box:hover .icon {
+    border-color: #106eea;
+  }

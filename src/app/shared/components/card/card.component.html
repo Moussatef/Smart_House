@@ -1,4 +1,7 @@
-<div class="container shadow py-4">
+<div class="container shadow py-4 card-divace">
+    <div class="text-center card-icon">
+        <i class="bi bi-cpu"></i>
+    </div>
     <div class=" row justify-content-end">
         <span class="span-btns">
 
@@ -6,7 +9,7 @@
                 <i [ngClass]="[ isOn ? iconOnClass : iconOffClass ]"></i>
             </button>
             <button type="button"  class="edit-btn col-3 ">
-                <i class="bi bi-pen"></i>
+                <i class="bi bi-gear"></i>
             </button>
             <button type="button" (click)="onDelete(divace)" class="delete-btn col-3 ">
                 <i class="bi bi-trash"></i>
