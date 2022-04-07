@@ -1,13 +1,6 @@
 {
   "Divace": [
     {
-      "id": 1,
-      "name": "TV",
-      "room": "Room 2",
-      "floor": 1,
-      "status": "OFF"
-    },
-    {
       "name": "Clime",
       "room": "YOUCODE",
       "floor": 2,
@@ -62,6 +55,13 @@
       "room": "Et neque omnis conse",
       "status": "ON",
       "floor": 7
+    },
+    {
+      "id": 539763,
+      "name": "Cruz Hood",
+      "room": "Ut tempor pariatur ",
+      "status": "ON",
+      "floor": 8
     }
   ]
 }

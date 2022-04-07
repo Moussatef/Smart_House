@@ -6,6 +6,7 @@ import { DangerAlertComponent } from './components/danger-alert/danger-alert.com
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -15,13 +16,15 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     DangerAlertComponent,
     NotFoundComponent,
-    HomePageComponent
+    HomePageComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
     RouterModule
   ],
   exports: [
+    FooterComponent,
     DangerAlertComponent,
     NavbarComponent,
     CardComponent

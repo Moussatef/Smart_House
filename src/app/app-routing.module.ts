@@ -19,6 +19,7 @@ const routes: Routes = [
       path:'my-divaces',
       component: ProfileComponent
     },
+   
   // {
   //   path:'followers' ,
   //    component  :FollowersComponent,

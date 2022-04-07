@@ -1,21 +1,24 @@
-<div class="container">
-  <header
-    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-        <use xlink:href="#bootstrap" />
-      </svg>
-    </a>
 
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a class="nav-link px-2 mx-2 " routerLink="home" routerLinkActive="active">Home</a></li>
-      <li><a routerLink="my-divaces" routerLinkActive="active" class="nav-link px-2 ">My Divaces</a></li>
+<!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center fixed-top">
+  <div class="container d-flex align-items-center justify-content-between">
 
-    </ul>
+    <h1 class="logo"><a href="index.html">Smart<span> H.</span></a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
-    <div class="col-md-3 text-end">
-      <button type="button" class="btn btn-outline-primary me-2">Login</button>
-      <button type="button" class="btn btn-primary">Sign-up</button>
-    </div>
-  </header>
-</div>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a class="nav-link scrollto " routerLink="home" routerLinkActive="active">Home</a></li>
+        <li><a class="nav-link scrollto" href="#services">Services</a></li>
+        <li><a class="nav-link scrollto" routerLink="my-divaces" routerLinkActive="active">Divaces</a></li>
+        <!-- <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+        <li><a class="nav-link scrollto" href="#team">Team</a></li>
+        
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
